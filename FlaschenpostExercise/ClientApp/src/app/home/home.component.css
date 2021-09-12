@@ -1,0 +1,23 @@
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.buttons {
+    height: 45.5px;
+}
+
+.info-containers {
+    display: flex; 
+    flex-direction: column; 
+    place-content: space-between;
+}
+
+.info-containers-short {
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    place-content: space-between;
+}

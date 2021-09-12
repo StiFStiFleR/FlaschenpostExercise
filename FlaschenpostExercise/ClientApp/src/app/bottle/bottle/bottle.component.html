@@ -1,0 +1,12 @@
+<div id="container" *ngIf="viewMode">
+    <img id="pic" src="{{bottle.image}}" alt="" >
+    <div id="description">
+        <p>{{bottle.name}}</p>
+        <p>{{bottle.price}} Euro</p>
+        <p>{{bottle.shortDescription}}</p>
+    </div>
+</div>
+
+<div id="container-short" *ngIf="!viewMode">
+    <img id="pic" src="{{bottle.image}}" alt="" >
+</div>

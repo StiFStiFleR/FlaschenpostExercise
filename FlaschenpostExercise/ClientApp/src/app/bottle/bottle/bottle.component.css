@@ -1,0 +1,26 @@
+#container {
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    margin: 5px auto;
+    padding: 10px 10px;
+    align-items: center;
+    max-width: 600px;
+}
+
+#container-short {
+    margin-bottom: 10px; 
+    min-width: 100px;
+}
+
+#description {
+    width: 100%;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+}
+
+#pic {
+    max-height: 150px;
+}

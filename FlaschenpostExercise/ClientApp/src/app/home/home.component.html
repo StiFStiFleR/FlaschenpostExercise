@@ -1,0 +1,24 @@
+<div style="display: flex; flex-direction: column; text-align: center;">
+  <div class="controls">
+    <mat-form-field>
+      <mat-label>Order by:</mat-label>
+      <mat-select matNativeControl>
+        <mat-option value="" (click)="sortBottlesByPrice('default')">Default</mat-option>
+        <mat-option value="" (click)="sortBottlesByPrice('asc')">Price ascending (сheap first)</mat-option>
+        <mat-option value="" (click)="sortBottlesByPrice('desc')">Price descending (expensive first)</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-button-toggle style="width: 60px;" (click)="viewMode = !viewMode">View</mat-button-toggle>
+    <mat-button-toggle style="width: 60px;" (click)="filterBottles()">Filter</mat-button-toggle>
+
+  </div>
+  <mat-divider style="margin-top: 10px; margin-bottom: 10px"></mat-divider>
+  <div *ngIf="loading" style="margin: 100px auto;">
+    <mat-spinner></mat-spinner>
+  </div>
+  <div *ngIf="!loading" class="info-containers" [ngClass]="{'info-containers-short': !viewMode}">
+    <div *ngFor="let bottle of bottles">
+      <app-bottle [bottle]="bottle" [viewMode]="viewMode"></app-bottle>
+    </div>
+  </div>
+</div>
